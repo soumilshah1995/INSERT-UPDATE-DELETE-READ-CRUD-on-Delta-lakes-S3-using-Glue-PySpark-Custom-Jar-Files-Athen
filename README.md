@@ -3,8 +3,22 @@
 
 <img width="721" alt="Capture" src="https://user-images.githubusercontent.com/39345855/203443414-bf243bdc-c1fb-413e-a0a4-4bfd3c44bb09.PNG">
 
-### Video Tutorial and steps 
+# Video Tutorial and steps 
 * https://www.youtube.com/watch?v=M0Q9AwnuW-w&feature=youtu.be
+
+# Steps 
+#### Step1 : Uplaod JAR files on S3 Bucket and then add the path in your glue script as shown in image 
+![image](https://user-images.githubusercontent.com/39345855/203443832-43e292ef-2111-4b13-93d4-02d048572762.png)
+```
+--additional-python-modules  
+faker==11.3.0
+
+```
+#### Step 2 : Copy Paste the code and make sure to change 
+```
+base_s3_path = "s3a://YOUR S3 BUCKET"
+```
+#### Step 3 : Deploy and run your code 
 
 
 
