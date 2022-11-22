@@ -1,5 +1,5 @@
 # INSERT-UPDATE-DELETE-READ-CRUD-on-Delta-lakes-S3-using-Glue-PySpark-Custom-Jar-Files-Athen
-## INSERT | UPDATE |DELETE| READ | CRUD |on Delta lakes(S3) using Glue PySpark Custom Jar Files &amp; Athena
+
 
 <img width="721" alt="Capture" src="https://user-images.githubusercontent.com/39345855/203443414-bf243bdc-c1fb-413e-a0a4-4bfd3c44bb09.PNG">
 
