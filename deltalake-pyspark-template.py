@@ -117,6 +117,25 @@ class DeltaLakeHelper(object):
         self.delta_df.update(condition, value_to_set)
         return True
 
+    def upsert_records_delta_lake(self, old_data_key, new_data_key , new_spark_df):
+        """
+        Set the value on delta lake
+        :param condition:Str IE "emp_id = '3'",
+        :param value_to_set: Dict IE  {"employee_name": "'THIS WAS UPDATE ON DELTA LAKE'"}
+        :return:
+        """
+
+        self.__generate_delta_df()
+        dfUpdates = new_spark_df
+
+        self.delta_df.alias('oldData') \
+            .merge(dfUpdates.alias('newData'), f'oldData.{old_data_key} = newData.{new_data_key}') \
+            .whenMatchedUpdateAll() \
+            .whenNotMatchedInsertAll() \
+            .execute()
+
+        return True
+
     def delete_records_delta_lake(self, condition=""):
         """
         Set the value on delta lake
@@ -179,12 +198,22 @@ def run():
     # ====================================================
     # helper.delete_records_delta_lake(condition="emp_id = '4'")
 
+
+    impleDataUpd = [
+        (3, "this is update on delta lake ", "Sales", "RJ", 81000, 30, 23000, 827307999),
+        (11, "This should be append ", "Engineering", "RJ", 79000, 53, 15000, 1627694678),
+    ]
+    columns = ["emp_id", "employee_name", "department", "state", "salary", "age", "bonus", "ts"]
+    usr_up_df = spark.createDataFrame(data=impleDataUpd, schema=columns)
+    helper.upsert_records_delta_lake(old_data_key='emp_id',
+                                     new_data_key='emp_id',
+                                     new_spark_df=usr_up_df)
+
+
     # ====================================================
     """ Compaction DELTA"""
     # ====================================================
-
     helper.compact_table(num_of_files=2)
-
     helper.delete_older_files_versions()
 
     helper.generate_manifest_files()
