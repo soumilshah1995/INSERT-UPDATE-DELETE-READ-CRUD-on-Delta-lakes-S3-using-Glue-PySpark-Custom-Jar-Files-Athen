@@ -21,16 +21,26 @@ base_s3_path = "s3a://YOUR S3 BUCKET"
 #### Step 3 : Deploy and run your code 
 
 
-
+-----------------------------
 ## """ DELTA Lakes """
+-----------------------------
 * How to Write | Read | Query Delta lake using AWS Glue and Athena for Queries for Beginners
-* https://www.youtube.com/watch?v=4HUgZksc1eE
+* Video:  https://www.youtube.com/watch?v=4HUgZksc1eE
 
 * Getting started with Delta lakes Pyspark and AWS Glue (Glue Connector)
-* https://www.youtube.com/watch?v=xpU6JPWZ9Pw&t=463s
+* Video: https://www.youtube.com/watch?v=xpU6JPWZ9Pw
+
+* INSERT | UPDATE |DELETE| READ | CRUD |on Delta lake(S3) using Glue PySpark Custom Jar Files & Athena
+* Video: https://www.youtube.com/watch?v=M0Q9AwnuW-w
+
+* How do I use Glue to convert existing small parquet files to larger parquet files on Delta Lake
+* Video : https://www.youtube.com/watch?v=AGWcGlraqEg&t=455s
 
 
+-----------------------------
 ## """HUDI"""
+-----------------------------
+
 * Getting started with Apache Hudi with PySpark and AWS Glue #1 Intro
 * https://www.youtube.com/watch?v=GhQ6Jr7ZlUM&t=4s
 
