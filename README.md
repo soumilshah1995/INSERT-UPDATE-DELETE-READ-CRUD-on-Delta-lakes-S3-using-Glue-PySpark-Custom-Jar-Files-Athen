@@ -8,7 +8,7 @@
 
 # Steps 
 
-*  Uplaod JAR files on S3 Bucket and then add the path in your glue script as shown in image and copy paste the code and make sure to change base s3 path 
+*  Upload JAR files on S3 Bucket and then add the path in your glue script as shown in image and copy paste the code and make sure to change base s3 path 
 
 ![image](https://user-images.githubusercontent.com/39345855/203443832-43e292ef-2111-4b13-93d4-02d048572762.png)
 ```
