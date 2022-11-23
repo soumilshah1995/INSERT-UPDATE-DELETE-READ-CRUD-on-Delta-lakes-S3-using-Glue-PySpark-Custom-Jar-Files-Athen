@@ -22,9 +22,10 @@ base_s3_path = "s3a://YOUR S3 BUCKET"
 
 
 -----------------------------
-## """ DELTA PySpark Template  """
+## """ DELTA Python PySpark Template  """
 -----------------------------
 * Link: https://github.com/soumilshah1995/INSERT-UPDATE-DELETE-READ-CRUD-on-Delta-lakes-S3-using-Glue-PySpark-Custom-Jar-Files-Athen/blob/main/deltalake-pyspark-template.py
+
 
 -----------------------------
 ## """ DELTA Lakes """
@@ -41,6 +42,8 @@ base_s3_path = "s3a://YOUR S3 BUCKET"
 * How do I use Glue to convert existing small parquet files to larger parquet files on Delta Lake
 * Video : https://www.youtube.com/watch?v=AGWcGlraqEg&t=455s
 
+* Upsert | Find One and Update in Delta Lake Using Glue Pyspark and Convert Small File into Large File
+* Video: https://youtu.be/861mVVgmXw4
 
 -----------------------------
 ## """HUDI"""
